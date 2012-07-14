@@ -1,5 +1,5 @@
 
-all: cls bst docs
+all: cls bst docs sample
 
 help:
 	@echo "Makefile for asc-cls."
@@ -9,11 +9,18 @@ help:
 	@echo "  <blank>: make everything"
 	@echo "  clean: clean stuff up"
 
-.PHONY: clean cls bst docs help
+.PHONY: clean cls bst docs help sample
+.PRECIOUS:  
+
+sample: asc-sample.tex asc.cls asc.bst asc-sample.bib
+	pdflatex -interaction=batchmode `basename '$<'`
+	bibtex asc-sample
+	pdflatex -interaction=batchmode `basename '$<'`
+	pdflatex -interaction=batchmode `basename '$<'`
 
 cls: asc.cls
 
-asc.cls: asc-package
+asc.cls asc-sample.tex: asc-package
 	
 asc-package: asc.ins asc.dtx
 	rm -f asc.cls

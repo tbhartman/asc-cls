@@ -40,6 +40,16 @@ To create the class and bibliography style files, run
     latex asc.ins
     latex asc.dbj
 
+Sample Document
+===============
+
+You may wish to render the example LaTeX document:
+
+    pdflatex asc-sample
+    bibtex asc-sample
+    pdflatex asc-sample
+    pdflatex asc-sample
+
 
 Info & Bugs
 ===========
