@@ -1,0 +1,454 @@
+% \iffalse meta-comment
+% 
+% Copyright (c) 2012 by Tim Hartman
+% 
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either
+% version 1.2 of this license or (at your option) any later
+% version. The latest version of this license is in:
+%
+% http://www.latex-project.org/lppl.txt
+%
+% and version 1.2 or later is part of all distributions of
+% LaTeX version 1999/12/01 or later.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{asc.dtx}
+%</driver>
+%<class>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+%<class>\ProvidesClass{asc}
+%<*class>
+   [2012/07/13 v0.1 ASC conference document class]
+%</class>
+%
+%<*driver>
+\documentclass{ltxdoc}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\usepackage[colorlinks,%
+            linkcolor=black,%
+            citecolor=black,%
+            filecolor=black,%
+            urlcolor=black]{hyperref}
+\usepackage{amsmath}
+\begin{document}
+  \DocInput{asc.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%
+% \changes{v0.0}{2012/07/11}{Initial version.}
+%
+% \DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
+% \DoNotIndex{\@badmath,\@centercr,\@cite}
+% \DoNotIndex{\@dotsep,\@empty,\@float,\@gobble,\@gobbletwo,\@ignoretrue}
+% \DoNotIndex{\@input,\@ixpt,\@m,\@minus,\@mkboth}
+% \DoNotIndex{\@ne,\@nil,\@nomath,\@plus,\roman,\@set@topoint}
+% \DoNotIndex{\@tempboxa,\@tempcnta,\@tempdima,\@tempdimb}
+% \DoNotIndex{\@tempswafalse,\@tempswatrue,\@viipt,\@viiipt,\@vipt}
+% \DoNotIndex{\@vpt,\@warning,\@xiipt,\@xipt,\@xivpt,\@xpt,\@xviipt}
+% \DoNotIndex{\@xxpt,\@xxvpt,\\,\ ,\addpenalty,\addtolength,\addvspace}
+% \DoNotIndex{\advance,\ast,\begin,\begingroup,\bfseries,\bgroup,\box}
+% \DoNotIndex{\bullet}
+% \DoNotIndex{\cdot,\cite,\CodelineIndex,\cr,\day,\DeclareOption}
+% \DoNotIndex{\def,\DisableCrossrefs,\divide,\DocInput,\documentclass}
+% \DoNotIndex{\DoNotIndex,\egroup,\ifdim,\else,\fi,\em,\endtrivlist}
+% \DoNotIndex{\EnableCrossrefs,\end,\end@dblfloat,\end@float,\endgroup}
+% \DoNotIndex{\endlist,\everycr,\everypar,\ExecuteOptions,\expandafter}
+% \DoNotIndex{\fbox}
+% \DoNotIndex{\filedate,\filename,\fileversion,\fontsize,\framebox,\gdef}
+% \DoNotIndex{\global,\halign,\hangindent,\hbox,\hfil,\hfill,\hrule}
+% \DoNotIndex{\hsize,\hskip,\hspace,\hss,\if@tempswa,\ifcase,\or,\fi,\fi}
+% \DoNotIndex{\ifhmode,\ifvmode,\ifnum,\iftrue,\ifx,\fi,\fi,\fi,\fi,\fi}
+% \DoNotIndex{\input}
+% \DoNotIndex{\jobname,\kern,\leavevmode,\let,\leftmark}
+% \DoNotIndex{\list,\llap,\long,\m@ne,\m@th,\mark,\markboth,\markright}
+% \DoNotIndex{\month,\newcommand,\newcounter,\newenvironment}
+% \DoNotIndex{\NeedsTeXFormat,\newdimen}
+% \DoNotIndex{\newlength,\newpage,\nobreak,\noindent,\null,\number}
+% \DoNotIndex{\numberline,\OldMakeindex,\OnlyDescription,\p@}
+% \DoNotIndex{\pagestyle,\par,\paragraph,\paragraphmark,\parfillskip}
+% \DoNotIndex{\penalty,\PrintChanges,\PrintIndex,\ProcessOptions}
+% \DoNotIndex{\protect,\ProvidesClass,\raggedbottom,\raggedright}
+% \DoNotIndex{\refstepcounter,\relax,\renewcommand}
+% \DoNotIndex{\rightmargin,\rightmark,\rightskip,\rlap,\rmfamily}
+% \DoNotIndex{\secdef,\selectfont,\setbox,\setcounter,\setlength}
+% \DoNotIndex{\settowidth,\sfcode,\skip,\sloppy,\slshape,\space}
+% \DoNotIndex{\symbol,\the,\trivlist,\typeout,\tw@,\undefined,\uppercase}
+% \DoNotIndex{\usecounter,\usefont,\usepackage,\vfil,\vfill,\viiipt}
+% \DoNotIndex{\viipt,\vipt,\vskip,\vspace}
+% \DoNotIndex{\wd,\xiipt,\year,\z@}
+%
+% \GetFileInfo{asc.dtx}
+% \title{\LaTeX{} Class for Conference Papers submitted to the
+%    American Society of Composites.\thanks{This
+%    file has version number \fileversion, last revised \filedate.}}
+%
+% \author{Tim Hartman \\ \texttt{tbhartman@vt.edu}}
+%
+% \maketitle
+%
+% \begin{abstract}
+%   This document provides a \LaTeXe{} class for formatting \LaTeX{} documents to be submitted to conferences hosted by the American Society of Composites.
+%   This class is neither provided nor endorsed by the American Society of Composites.
+%   Proceed with caution; this was written for the 2012 ASC Conference in Arlington, TX.
+% \end{abstract}
+%
+% \tableofcontents
+%
+% \section{Introduction}
+% 
+% The American Society of Composites provides instructions for formatting papers submitted to its conferences.
+% However, it provides no means for formatting \LaTeX{} documents.
+% This \texttt{asc-cls} seeks to fill the gap by styling the \LaTeX{} document as well as replicating the  instructions.
+% The instructions to which this document adheres may be
+% found at
+% \url{http://asc2012.uta.edu/ASC\%20AUTHOR\%20GUIDELINES\%202012.pdf}.
+% 
+% If you are working in Microsoft Word, please find a template at
+% \url{http://asc2012.uta.edu/ASC\_AUTHOR\_GUIDELINES\_2012.doc}.
+% 
+%
+% \section{Usage}
+% 
+% Two files are needed to format your \LaTeX\ document according to the ASC standards; the class file \texttt{asc.cls} and the bibliography style file \texttt{asc.bst}.
+% To obtain these files, you must first have \texttt{asc.dtx}, \texttt{asc.ins}, and \texttt{asc.dbj}.
+% To extract the \texttt{asc.cls} file, run \\[5pt]
+% |   latex asc.ins|\\[5pt]
+% To obtain this documentation, run \\[5pt]
+% |   pdflatex asc.dtx|\\[5pt]
+% To obtain \texttt{asc.bst}, run \\[5pt]
+% |   latex asc.dbj|\\[5pt]
+%
+% The ASC class is invoked by including \\[5pt]
+% |   \documentclass[|{\itshape options}|]{asc}|\\[5pt]
+% at the beginning of your document.
+% The bibliography style file \texttt{asc.bst} is needed for formatting the bibliography.
+% Besure that is in your \TeX path and have\\[5pt]
+% |   \bibliographystyle{asc}|\\[5pt]
+% before the |\bibliography| command.
+
+%
+% \section{Options}
+% 
+% With no options given to the |\documentclass{asc}| call, the rendered document should adhere to ASC formatting guidelines.
+% However, this formatting may not be most condusive to proofreading the manuscript.
+% The following options alter the formatting of the |asc| class (and, thus, deviate from the formatting requirements).
+% Be sure to remove all options before the final rendering.
+%
+% \subsection{Double spacing}
+% \DescribeMacro{doublespacing}
+% Add the |doublespacing| option to produce a double-spaced document.
+% This multiplies the |\baselineskip| by $1.667$.
+%
+% \subsection{Margin notes}
+% \DescribeMacro{marginnotessize}
+% Adding |marginnotessize| to the options list renders the document with wide right margins.
+% Additionally, the |\note| macro prints its optional argument to the margin (without |marginnotesize|, the optional argument to |\note| is not rendered).
+%
+% \subsection{Page numbers}
+% \DescribeMacro{pagenum}
+% \DescribeMacro{nopagenum}
+% Adding |pagenum| to the options list prints page numbers at the bottom of the each page (using the \LaTeX\ defaults).
+% Conversely, |nopagenum|, the default option, removes all page numbers per the formatting guidelines.
+%
+%
+% \subsection{Title page}
+%
+% \DescribeMacro{\affiliation}
+% \DescribeMacro{titlepage}
+% \DescribeMacro{notitlepage}
+% \DescribeMacro{toc}
+% The default option |titlepage| changes the definition of |\maketitle| to match ASC standards.
+% With |notitlepage|, |\maketitle| creates a default title page (contradicting the formatting required by ASC).
+% This is currently buggy, so just let it to |titlepage|.
+% The |toc| option works a table of contents in to the ASC formatted title page.
+% This is non-standard.
+% This option (|toc|) as no effect when |notitlepage| is given.
+% I define the |\affiliation| macro which you use like |\author| or |\date|.
+% It works, kind of.
+%
+% \StopEventually{\PrintChanges \PrintIndex}
+%
+% \section{Code Documentation}
+%
+% This section is dedicated to explaining the \texttt{asc.cls} code itself.
+% 
+% \subsection{Some things to start with}
+%
+% Several options are held in boolean variables, defined here:
+%    \begin{macro}{\if@doublespacing}
+%    \begin{macro}{\if@marginnotessize}
+%    \begin{macro}{\if@pagenum}
+%    \begin{macro}{\if@asctitlepage}
+%    \begin{macro}{\if@asctitlepagetoc}
+%    A switch to indicate if a titlepage has to be produced.  For the
+%    article document class the default is not to make a separate
+%    titlepage.
+%    \begin{macrocode}
+\newif\if@doublespacing
+\newif\if@marginnotessize
+\newif\if@pagenum
+\newif\if@asctitlepage
+\newif\if@asctitlepagetoc
+%    \end{macrocode}
+%    \end{macro}
+%    \end{macro}
+%    \end{macro}
+%    \end{macro}
+%    \end{macro}
+%
+%
+% \subsection{Options}
+% \subsubsection{Declaration of Options}
+% Declare all the options available.
+% Pass unknown options to article.
+%    \begin{macrocode}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\DeclareOption{doublespacing}{\@doublespacingtrue}
+\DeclareOption{marginnotessize}{\@marginnotessizetrue}
+\DeclareOption{pagenum}{\@pagenumtrue}
+\DeclareOption{nopagenum}{\@pagenumfalse}
+\DeclareOption{titlepage}{\@asctitlepagetrue}
+\DeclareOption{notitlepage}{\@asctitlepagefalse}
+\@asctitlepagetocfalse
+\DeclareOption{toc}{\@asctitlepagetoctrue}
+%    \end{macrocode}
+%
+% \subsubsection{Executing Options}
+%
+% We know process all the options, as well as defining the defaults.
+%    \begin{macrocode}
+\ExecuteOptions{nopagenum,titlepage}
+\ProcessOptions
+%    \end{macrocode}
+%
+% \subsection{Load \texttt{Article} Class}
+% 
+% The article class is loaded with required options.
+% I pass the letterpaper, but I could check later which is used and set the margins accordingly.
+%    \begin{macrocode}
+\LoadClass[12pt,letterpaper]{article}%
+%    \end{macrocode}
+%
+% \subsection{Do the formatting!}
+%    \begin{macrocode}
+\RequirePackage{etoolbox}
+\if@pagenum\else
+\RequirePackage{nopageno}
+\fi
+%    \end{macrocode}
+%
+%
+% \subsubsection{Page Layout}
+%    I could do this based on the size of the paper, but I'll just assume we have \texttt{letterpaper} and continue.
+%    I account for the \texttt{marginnotessize} and \texttt{doublespacing} options here.
+%    \begin{macrocode}
+\if@marginnotessize
+\RequirePackage[left=0.65in,right=2.23in,top=0.75in,bottom=0.93in,marginparwidth=1.8in]{geometry}
+\else
+\RequirePackage[left=1.32in,right=1.56in,top=0.75in,bottom=0.93in]{geometry}
+\fi
+\if@doublespacing
+    \linespread{1.667}
+\fi
+%    \end{macrocode}
+%
+%    Use Times New Roman font.
+%    \begin{macrocode}
+\RequirePackage{times}
+%    \end{macrocode}
+%
+%    \DescribeEnv{abstract}
+%    A limited |abstract| environment is available.
+%    I want it to be in the Table of Contents, but it should not be numberd.
+%    \begin{macrocode}
+\renewenvironment{abstract}{\section*{Abstract}}{\addcontentsline{toc}{section}{Abstract}}
+%    \end{macrocode}
+%
+%    Floats must be only at the top or bottom of the page, so set the defaults here.
+%    \begin{macrocode}
+\RequirePackage{float}
+\floatplacement{figure}{tb}%
+\floatplacement{table}{tb}%
+%    \end{macrocode}
+%    Furthermore, I change some default \LaTeX\ spacing options.
+%    I don't really know what I'm doing, but it looks okay\ldots
+%    \begin{macrocode}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dblfloatpagefraction}{0.7}
+%    \end{macrocode}
+%
+%    Floats must have space between them and the main text.
+%    This seems to do the trick.
+%    \begin{macrocode}
+\setlength{\textfloatsep}{1.0\baselineskip}
+%    \end{macrocode}
+%
+%    Paragraphs must be indented by $18 \text{~pt}$.
+%    \begin{macrocode}
+\AtBeginDocument{
+  \setlength{\parindent}{18pt}%
+}
+%    \end{macrocode}
+%
+%    Spacing is prescribed between various sections of the document.
+%    The \texttt{titlesec} package seems to be wonderful for this.
+%    The options are declared by \\[5pt]
+%    |\titlespacing| \marg{command} \marg{left sep} \marg{before sep} \marg{after sep} \marg{right sep} \\[5pt]
+%    for spacing and \\[5pt]
+%    |\titleformat| \marg{command} \oarg{shape} \marg{format} \marg{label} \marg{sep} \marg{before} \oarg{after}\\[5pt]
+%    for the formatting.
+%    \begin{macrocode}
+\RequirePackage{titlesec}
+\titlespacing
+  {name=\section} % command
+  {0pt} % left
+  {2\baselineskip} % before sep
+  {\baselineskip} % after sep
+  %{} % right sep
+\titleformat
+  {name=\section} % command
+  [hang] % shape
+  {\bfseries} % format
+  {\thesection} % label
+  {1em} %sep
+  {\uppercase} %before
+  [] %after
+
+\titlespacing
+  {name=\subsection} % command
+  {0pt} % left
+  {\baselineskip} % before sep
+  {\baselineskip} % after sep
+  %{} % right sep
+\titleformat
+  {name=\subsection} % command
+  [hang] % shape
+  {\bfseries} % format
+  {\thesubsection} % label
+  {1em} %sep
+  {} %before
+  [] %after
+
+\titlespacing
+  {name=\subsubsection} % command
+  {0pt} % left
+  {\baselineskip} % before sep
+  {\baselineskip} % after sep
+  %{} % right sep
+\titleformat
+  {name=\subsubsection} % command
+  [hang] % shape
+  {} % format
+  {\thesubsubsection} % label
+  {1em} %sep
+  {\uppercase} %before
+  [] %after
+%    \end{macrocode}
+%
+%    The bibliography section has some tweaks that I'm not sure how to deal with other than redefining it entirely.
+%    This is copied from the \texttt{article} class definition.
+%    The key parts are making the name be all caps and the references be $10 \text{~pt}$ font.
+%    \begin{macrocode}
+\renewenvironment{thebibliography}[1]
+     {\section*{\refname}%
+      \addcontentsline{toc}{section}{\refname}%
+      \small
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+%
+%    Here I rework the caption formats for figures and tables using the \texttt{caption} package.
+%    Both need a smaller font.
+%    Tables need all caps, which is not a built-in option to \texttt{caption}, so I define a custom format with |\DeclareCaptionFormat|.
+%    \begin{macrocode}
+\RequirePackage{caption}
+\captionsetup[figure]{font={small}}
+\DeclareCaptionFormat{caps}{{#1}{#2}\uppercase{#3}\par}
+\captionsetup[table]{font={small},format={caps},name=TABLE}
+%    \end{macrocode}
+%    Furthermore, tables should be referenced by roman numerals.
+%    \begin{macrocode}
+\renewcommand*\thetable{\Roman{table}}
+%    \end{macrocode}
+%
+%    Here I allow the definition for an affiliation.
+%    \begin{macro}{\affiliation}
+%    \begin{macrocode}
+\makeatletter
+\def\affiliation#1{\gdef\@affiliation{#1}}
+\def\@affiliation{}
+%    \end{macrocode}
+%    \end{macro}
+%    Now we can make the title page.
+%    \begin{macrocode}
+\if@asctitlepagetoc
+  \def\@makeasctitletoc{\tableofcontents}
+\else
+  \def\@makeasctitletoc{}
+\fi
+\if@asctitlepage
+\renewcommand{\@maketitle}{
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+    {\Large \@title \par}%
+    \vskip 2.0\baselineskip %
+    \@author \footnote{\fontsize{10pt}{10} \sffamily \@affiliation}
+  \end{center}%
+  \par
+  \@makeasctitletoc
+  \clearpage \hphantom{0pt} \vspace{3.5in}
+  %\@asctitlepagenum%
+  }
+\fi
+\makeatother
+%    \end{macrocode}
+%
+%    That's all!
+% \Finale
+%
+\endinput
+

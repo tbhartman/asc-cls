@@ -1,0 +1,63 @@
+%
+%  `asc.ins' - The installation file for the `asc' distribution
+%
+% To obtain the individual components of the ASC bundle necessary
+% to produce a document, process this file with LaTeX, viz,
+%
+%  latex asc.ins
+%
+% The class and bibliography style files will be extracted from the file
+% `asc.dtx' via the docstrip utility, which is part of LaTeX.
+%
+% The Users Manual, 'asc.pdf', was produced by running 'asc.dtx'
+% through LaTeX, viz, 
+%
+%  latex asc.dtx
+%
+% `asc' is based on the standard LaTeX article class and various
+% standard packages.  Patrick Daly's custom-bib package was used
+% to generate the foundations of the ASC bibliographic style file.
+
+\def\batchfile{asc.ins}
+\input docstrip.tex
+
+\keepsilent
+\preamble
+
+Welcome to the ASC LaTeX package.
+
+For further details and support, read the Users Manual, asc.pdf.
+
+This software is released under the terms of the LaTeX Project Public
+License.  Copyright (C) 2012 by Tim Hartman.
+
+\endpreamble
+
+\declarepostamble\bstpostamble
+\endpostamble
+
+\generate{\file{asc.cls}{\from{asc.dtx}{class}}}
+
+\Msg{::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::}
+\Msg{ }
+\Msg{ The ASC class file,}
+\Msg{ }
+\Msg{   asc.cls}
+\Msg{ }
+\Msg{ needs to be moved into a directory searched by LaTeX.}
+\Msg{ }
+\Msg{ The bibliography style file,}
+\Msg{ }
+\Msg{   asc.bst}
+\Msg{ }
+\Msg{ needs to be moved into a directory searched by BibTeX.}
+\Msg{ }
+\Msg{ The users manual, `asc.pdf', contains more detailed installation}
+\Msg{ instructions.  If you do not have this file, it can be created}
+\Msg{ by running the file `asc.dtx' through (PDF)LaTeX.}
+\Msg{ }
+\Msg{::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::}
+
+\endinput
+
+% $Id: asc.ins,v 1.5 2004/05/23 12:49:43 kleb Exp $
