@@ -1,8 +1,8 @@
 =======
-ASC.cls
+asc-cls
 =======
 
-ASC.cls is a LaTeX class file which strives to adhere to the American Society
+asc-cls is a LaTeX class which strives to adhere to the American Society
 of Composites' conference paper guidelines.
 
 I am not affiliated with the American Society of Composites.
@@ -12,7 +12,7 @@ License
 
 © 2012 T.B. Hartman
 
-ASC.cls is free and licensed under the Apache License 2.0.  You are welcome to
+asc-cls is free and licensed under the Apache License 2.0.  You are welcome to
 change and redistribute it under certain conditions.  For more information, see
 the LICENSE file or visit:
 
@@ -24,9 +24,9 @@ product.
 Instructions
 ============
 
-Save ACS.cls to a location in your LaTeX search path and use:
+Use
 
-    \documentclass[]{ACS}
+    \documentclass[]{asc}
 
 in the preamble of your TeX source file.  For further instructions, reference the documentation by either running
 
