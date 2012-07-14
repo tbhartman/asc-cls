@@ -10,12 +10,13 @@ help:
 	@echo "  clean: clean stuff up"
 
 .PHONY: clean cls bst docs help
-.PRECIOUS:  %.drv
 
 cls: asc.cls
+
+asc.cls: asc-package
 	
-%.cls: %.ins %.dtx
-	rm -f $@
+asc-package: asc.ins asc.dtx
+	rm -f asc.cls
 	latex -interaction=batchmode $<
 
 bst: asc.bst
