@@ -5,6 +5,7 @@ ASC.cls
 ASC.cls is a LaTeX class file which strives to adhere to the American Society
 of Composites' conference paper guidelines.
 
+I am not affiliated with the American Society of Composites.
 
 License
 =======
