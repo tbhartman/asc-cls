@@ -48,4 +48,4 @@ Source code:
     https://github.com/tbhartman/asc-cls
 
 Please report any issues to:
-    tbhartman@gmail.com
+    tbhartman@vt.edu
