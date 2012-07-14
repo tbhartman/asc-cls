@@ -27,17 +27,19 @@ Save ACS.cls to a location in your LaTeX search path and use:
 
     \documentclass[]{ACS}
 
-in the preamble of your TeX source file.
+in the preamble of your TeX source file.  For further instructions, reference the documentation by either running
 
+    make docs
 
-Options
-=======
+or
 
-Use 
+    pdflatex asc.dtx
 
-    \documentclass[doublespace]{ACS}
-    
-to doublespace your document (not part of ASC's style).
+To create the class and bibliography style files, run
+
+    latex asc.ins
+    latex asc.dbj
+
 
 Info & Bugs
 ===========
