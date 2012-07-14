@@ -282,6 +282,18 @@
 \RequirePackage{times}
 %    \end{macrocode}
 %
+%    \DescribeMacro{\note}
+%    I define |\note| for making personal notes within a document, intended to be removed before the final rendering.
+%    They must be removed manually at this point.
+%    \begin{macrocode}
+\RequirePackage{color}
+\makeatletter
+\def\note{\@ifnextchar[{\@with}{\@without}}
+\def\@with[#1]#2{\PackageWarning{ASC}{note}\marginpar{\tiny \color{blue}#1} {\color{blue} #2}}
+\def\@without#1{\note[]{#1}}
+\makeatother
+%    \end{macrocode}
+%
 %    \DescribeEnv{abstract}
 %    A limited |abstract| environment is available.
 %    I want it to be in the Table of Contents, but it should not be numberd.
