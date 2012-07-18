@@ -37,14 +37,16 @@ docs: asc.pdf
 	pdflatex -interaction=batchmode $<
 
 clean_tex= \
-	rm -f $(1).log \
-	      $(1).toc \
-	      $(1).idx \
-	      $(1).aux \
+	rm -f $(1).aux \
+	      $(1).blg \
+	      $(1).bbl \
 	      $(1).glo \
+	      $(1).idx \
+	      $(1).log \
 	      $(1).out \
-	      $(1).toc \
+	      $(1).toc
 
 clean:
 	$(call clean_tex,asc)
+	$(call clean_tex,asc-sample)
 
