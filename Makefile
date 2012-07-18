@@ -3,10 +3,15 @@ all: cls bst docs sample
 
 help:
 	@echo "Makefile for asc-cls."
-	@echo "  run \\$$make COMMAND"
+	@echo "  run \`make COMMAND\`"
 	@echo "  where COMMAND is:"
 	@echo ""
-	@echo "  <blank>: make everything"
+	@echo "  <blank>: synonym for 'make cls bst docs sample'"
+	@echo "  cls: make class asc.cls"
+	@echo "  bst: make bib style asc.bst"
+	@echo "  docs: make docs for class"
+	@echo "  sample: make pdf from template"
+	@echo "  help: this help message"
 	@echo "  clean: clean stuff up"
 
 .PHONY: clean cls bst docs help sample
