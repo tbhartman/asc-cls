@@ -24,22 +24,42 @@ product.
 Instructions
 ============
 
-Use
+Download all the files here and run
+
+    make
+
+to create create everything you need.  You might finish it up with a 
+
+    make clean
+
+to get rid of all the intermediate files. This will create the class file, the
+bibliography style file, the documentation for the class, and the rendered PDF
+of the sample file.  You can then use
 
     \documentclass[]{asc}
 
-in the preamble of your TeX source file.  For further instructions, reference the documentation by either running
+in the preamble of your TeX source file (provided **asc.cls** is in TeX's path).
 
-    make docs
+If ```make``` is not your thing, you can get the files by:
 
-or
+    latex asc.dtx
 
-    pdflatex asc.dtx
-
-To create the class and bibliography style files, run
+for the class docs,
 
     latex asc.ins
+
+for the class file itself,
+
     latex asc.dbj
+
+for the bibliography style file, and (after those)
+
+    latex asc-sample
+    bibtex asc-sample
+    latex asc-sample
+    latex asc-sample
+
+for the rendered sample PDF.
 
 Sample Document
 ===============
