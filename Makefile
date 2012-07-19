@@ -14,10 +14,12 @@ help:
 	@echo "  help: this help message"
 	@echo "  clean: clean stuff up"
 
-.PHONY: clean cls bst docs help sample
+.PHONY: clean cls bst docs help sample asc-package
 .PRECIOUS:  
 
-sample: asc-sample.tex asc.cls asc.bst asc-sample.bib
+sample: asc-sample.pdf
+
+asc-sample.pdf: asc-sample.tex asc.cls asc.bst asc-sample.bib
 	pdflatex -interaction=batchmode `basename '$<'`
 	bibtex asc-sample
 	pdflatex -interaction=batchmode `basename '$<'`
@@ -25,9 +27,7 @@ sample: asc-sample.tex asc.cls asc.bst asc-sample.bib
 
 cls: asc.cls
 
-asc.cls asc-sample.tex: asc-package
-	
-asc-package: asc.ins asc.dtx
+asc.cls: asc.ins asc.dtx
 	rm -f asc.cls
 	latex -interaction=batchmode $<
 
