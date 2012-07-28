@@ -170,10 +170,10 @@
 % Additionally, the |\note| macro prints its optional argument to the margin (without |marginnotesize|, the optional argument to |\note| is not rendered).
 %
 % \subsection{Page numbers}
-% \DescribeMacro{pagenum}
-% \DescribeMacro{nopagenum}
-% Adding |pagenum| to the options list prints page numbers at the bottom of the each page (using the \LaTeX\ defaults).
-% Conversely, |nopagenum|, the default option, removes all page numbers per the formatting guidelines.
+% \DescribeMacro{pageno}
+% \DescribeMacro{nopageno}
+% Adding |pageno| to the options list prints page numbers at the bottom of the each page (using the \LaTeX\ defaults).
+% Conversely, |nopageno|, the default option, removes all page numbers per the formatting guidelines.
 %
 %
 % \subsection{Title page}
@@ -202,7 +202,7 @@
 % Several options are held in boolean variables, defined here:
 %    \begin{macro}{\if@doublespacing}
 %    \begin{macro}{\if@marginnotessize}
-%    \begin{macro}{\if@pagenum}
+%    \begin{macro}{\if@pageno}
 %    \begin{macro}{\if@asctitlepage}
 %    \begin{macro}{\if@asctitlepagetoc}
 %    A switch to indicate if a titlepage has to be produced.  For the
@@ -211,7 +211,7 @@
 %    \begin{macrocode}
 \newif\if@doublespacing
 \newif\if@marginnotessize
-\newif\if@pagenum
+\newif\if@pageno
 \newif\if@asctitlepage
 \newif\if@asctitlepagetoc
 %    \end{macrocode}
@@ -230,8 +230,8 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{doublespacing}{\@doublespacingtrue}
 \DeclareOption{marginnotessize}{\@marginnotessizetrue}
-\DeclareOption{pagenum}{\@pagenumtrue}
-\DeclareOption{nopagenum}{\@pagenumfalse}
+\DeclareOption{pageno}{\@pagenotrue}
+\DeclareOption{nopageno}{\@pagenofalse}
 \DeclareOption{titlepage}{\@asctitlepagetrue}
 \DeclareOption{notitlepage}{\@asctitlepagefalse}
 \@asctitlepagetocfalse
@@ -242,7 +242,7 @@
 %
 % We know process all the options, as well as defining the defaults.
 %    \begin{macrocode}
-\ExecuteOptions{nopagenum,titlepage}
+\ExecuteOptions{nopageno,titlepage}
 \ProcessOptions
 %    \end{macrocode}
 %
@@ -257,7 +257,7 @@
 % \subsection{Do the formatting!}
 %    \begin{macrocode}
 \RequirePackage{etoolbox}
-\if@pagenum\else
+\if@pageno\else
 \RequirePackage{nopageno}
 \fi
 %    \end{macrocode}
