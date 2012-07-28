@@ -298,7 +298,10 @@
 %    A limited |abstract| environment is available.
 %    I want it to be in the Table of Contents, but it should not be numberd.
 %    \begin{macrocode}
-\renewenvironment{abstract}{\section*{Abstract}}{\addcontentsline{toc}{section}{Abstract}}
+\RequirePackage{calc}
+\newlength{\ascabsskip}
+\setlength{\ascabsskip}{2.75in-0.6in}
+\renewenvironment{abstract}{\vspace*{\ascabsskip}\section*{Abstract}\addcontentsline{toc}{section}{Abstract}}{}
 %    \end{macrocode}
 %
 %    Floats must be only at the top or bottom of the page, so set the defaults here.
