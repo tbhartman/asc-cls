@@ -354,7 +354,7 @@
   {\bfseries} % format
   {\thesection} % label
   {1em} %sep
-  {\uppercase} %before
+  {\MakeUppercase} %before
   [] %after
 
 \titlespacing
@@ -384,7 +384,7 @@
   {} % format
   {\thesubsubsection} % label
   {1em} %sep
-  {\uppercase} %before
+  {\MakeUppercase} %before
   [] %after
 %    \end{macrocode}
 %
@@ -420,7 +420,7 @@
 %    \begin{macrocode}
 \RequirePackage{caption}
 \captionsetup[figure]{font={small}}
-\DeclareCaptionFormat{caps}{{#1}{#2}\uppercase{#3}\par}
+\DeclareCaptionFormat{caps}{{#1}{#2}\MakeUppercase{#3}\par}
 \captionsetup[table]{font={small},format={caps},name=TABLE}
 %    \end{macrocode}
 %    Furthermore, tables should be referenced by roman numerals.
