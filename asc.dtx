@@ -41,7 +41,7 @@
 %</driver>
 % \fi
 %
-% \CheckSum{0}
+% \CheckSum{313}
 %
 % \CharacterTable
 %  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -420,8 +420,8 @@
 %    \begin{macrocode}
 \RequirePackage{caption}
 \captionsetup[figure]{font={small}}
-\DeclareCaptionFormat{caps}{{#1}{#2}\MakeUppercase{#3}\par}
-\captionsetup[table]{font={small},format={caps},name=TABLE}
+\DeclareCaptionTextFormat{caps}{\MakeUppercase{#1}}
+\captionsetup[table]{font={small},textformat={caps},name=TABLE}
 %    \end{macrocode}
 %    Furthermore, tables should be referenced by roman numerals.
 %    \begin{macrocode}
